@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo super Legal</title>
+</head>
+<body>
+    <div class = "header">
+        <img src="images/Photo from 2026-08-27 20-16-52.078799.jpeg" alt="foto de perfil do Goat" 
+        class="foto-perfil" width="300" height="220">
+        <hr>
+        <h1>Lucas Fares Corrêa Auad Pereira - São Paulo, SP</h1>
+        <p>Engenheiro de Software</p>
+    </div>
+    <section>
+        <h1>Contatos</h1>
+        <ul>
+            <li>
+                <img src="icons/linkedin-svgrepo-com.svg" alt="icone-linkedin" width="20">
+                <a href="https://www.linkedin.com/in/lucas-fares-c/" title="Pacto Global ODS" target="_blank"> Linkedin: Lucas Fares</a> |        
+            </li>
+            <li>
+                <img src="icons/whatsapp-svgrepo-com.svg" alt="icone-zap" width="20">
+                <a href="https://wa.me/+5514998840405" title="Meu Contato" target="_blank"> Telefone/Whatsapp</a> |
+            </li>
+            <li>
+                <img src="icons/github-142-svgrepo-com.svg" alt="icones-github" width="20">
+                <a href="https://github.com/LucasFaresC">GitHub: LucasFaresC</a> |
+            </li>
+            <li>
+                <img src="icons/email-1573-svgrepo-com.svg" alt="icone-email" width="20">
+                <a href="mailto:lucasfarescorrea@gmail.com">Email: lucasfarescorrea@gmail.com</a>
+            </li>
+        </ul>
+        <hr>
+    </section>
+    <section class="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>JavaScript</li>
+      <li>HTML5 & CSS3</li>
+      <li>Python, ML, OpenCV</li>
+      <li>Java, SpringBoot</li>
+      <li>SQL, MySQL, PostgreSQL</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+  <section class ="resumo">
+        <h1>Resumo</h1>
+        <p>Desenvolvedor Fullstack e Engenheiro de Visão Computacional a 2 anos, tenho vasta
+            experiencia em pesquisa e desenvolvimento.
+        </p>
+  </section>
+  <section class = "ODS">
+        <h2>ODS que pretendo contribuir</h2>
+        <img src="icons/SDG-4.svg" alt="educação de qualidade" class="foto-ods-contribuente" width="300" height="220">
+        <p> Com o abrindo portas, pretendo democratizar o acesso a educaçõ de qualidade!</p>
+  </section>
+  <section class="experiencia">
+        <h2>Experiência Profissional</h2>
+        <div class = "item-experiencia">
+            <h3>Engenheiro de Software e Visão Computacional → Scorplay</h3>
+            <p class="periodo"> 12/2025 - 06/2026</p>
+            <ul>
+                <li> <strong>Pesquisa e Desenvolvimento:</strong> Testei a viabilidade de tecnologias de Computer Vision, em sistemas embarcados
+                    (rasbeberryPie 4 & NPU integrada) com base em artigos, publicações e literatura acadêmica.  
+                </li>
+                <li>
+                    <strong>Sistemas de Biometria Facial:</strong>  Implementei sistemas com Python avançado usando Open CV, Face recognition, e
+                    sistema de arquivos inteligente com registro de imagem, e arquivos csv.
+                </li>
+                <li>
+                    <strong>WebScrapping e Engenharia de Dados para Datasets:</strong> Uso da plataforma RoboFlow e algoritmos de
+                    WebScraping python (Selenium no Chromium) para coleta de dados automatizada em massa.
+                </li>
+            </ul>
+        </div>
+        <div class = "item-experiência">
+            <h3>Professor de Inglês → Abrindo Portas</h3>
+            <p class = "periodo"> 05/2026 - Atual </p>
+            <ul>
+                <li>Ministrei oficinas de inglês para a comunidade de cornélio procópio</li>
+            </ul>
+        </div>
+  </section>
+  <section class="educacao">
+    <h2>Educação</h2>
+    <div class="item-educacao">
+      <h3>Engenharia de Computação</h3>
+      <p> UTFPR-CP | 2028</p>
+    </div>
+  </section>
+  <section class="formulario-contato">
+        <h2 style="margin: 0px;  border: 1px solid rgb(247, 2, 2);
+        background-color: rgb(199, 223, 15);">Entre em Contato!</h2>
+        <br><br>
+        <button type="button" id="abrir-modal">Enviar informações de contato</button>
+
+        <dialog id="modal-contato">
+            <form id="form-contato" method="dialog" novalidate>
+            <h2>Formulário de contato</h2>
+
+            <p>
+                <label for="nome-completo">Nome completo:</label><br />
+                <input type="text" id="nome-completo" name="nome-completo" />
+            </p>
+
+            <p>
+                <label for="instagram">Link para o Instagram:</label><br />
+                <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/seu-usuario" />
+            </p>
+
+            <p>
+                <label for="whatsapp">Número do WhatsApp:</label><br />
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" />
+            </p>
+
+            <button type="submit">Enviar</button>
+            <button type="button" id="fechar-modal">Fechar</button>
+            </form>
+        </dialog>
+    </section>
+    <script>
+        const modal = document.getElementById('modal-contato');
+        const abrirModal = document.getElementById('abrir-modal');
+        const fecharModal = document.getElementById('fechar-modal');
+        const formulario = document.getElementById('form-contato');
+        const nomeCompleto = document.getElementById('nome-completo');
+        const instagram = document.getElementById('instagram');
+        const whatsapp = document.getElementById('whatsapp');
+
+        // As funções anônimas (arrow functions) são criadas sem nome e executadas
+        // quando o evento "click" acontece em cada botão.
+        abrirModal.addEventListener('click', () => modal.showModal());
+        fecharModal.addEventListener('click', () => modal.close());
+
+        // Esta função anônima é executada quando o formulário é enviado.
+        formulario.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+        
+        const instagramValido = /^https:\/\/(www\.)?instagram\.com\/.+/.test(instagram.value.trim());
+        //O .test() é um método de RegExp em JavaScript que verifica se uma determinada string corresponde à expressão regular.
+        //em JavaScript, a regex é um objeto do tipo RegExp, e .test() é um método desse objeto.
+        //Portanto: objeto.metodo(valor)
+
+        if (nomeCompleto.value.trim() === '') {
+            alert('Informe o nome completo.');
+            nomeCompleto.focus();
+            return;
+        }
+
+        if (!instagramValido) {
+            alert('Informe um link válido do Instagram, começando com https://instagram.com/.');
+            instagram.focus();
+            return;
+        }
+
+        if (whatsapp.value.trim() === '') {
+            alert('Informe o número do WhatsApp.');
+            whatsapp.focus();
+            return;
+        }
+
+        alert('Formulário enviado com sucesso!');
+        formulario.reset();
+        modal.close();
+        });
+
+  </script>
+
+</body>
+</html>
